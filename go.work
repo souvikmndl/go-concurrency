@@ -1,0 +1,6 @@
+go 1.24.2
+
+use (
+	./challenge-1
+	./lesson-1
+)
