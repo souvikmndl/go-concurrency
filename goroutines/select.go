@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 )
 
 // SelectChan explores select statements
@@ -23,17 +22,17 @@ func SelectChan() {
 		fmt.Println(val1)
 	case val2 := <-chanl2:
 		fmt.Println(val2)
-	default:
-		fmt.Println("Some error")
+		// default:
+		// 	fmt.Println("Some error")
 	}
 }
 
 func funcOne(chanl1 chan string) {
-	time.Sleep(1 * time.Second)
+	// time.Sleep(1 * time.Second)
 	chanl1 <- "Welcome to channel 1/funcOne"
 }
 
 func funcTwo(chanl2 chan int) {
-	time.Sleep(1 * time.Second)
+	// time.Sleep(1 * time.Second)
 	chanl2 <- 20
 }
